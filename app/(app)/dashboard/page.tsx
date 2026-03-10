@@ -1,6 +1,8 @@
 import { createClient } from "@/lib/supabase/server";
 import { StatsCards } from "@/components/dashboard/stats-cards";
 
+export const dynamic = "force-dynamic";
+
 export default async function DashboardPage() {
   const supabase = await createClient();
   const {

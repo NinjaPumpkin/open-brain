@@ -49,7 +49,7 @@ export async function POST(req: Request) {
   });
 
   // Search memory for context
-  let searchResults;
+  let searchResults: import("@/lib/types").SearchResult[] = [];
   try {
     const serviceClient = (await import("@/lib/supabase/server")).createServiceClient;
     const svc = await serviceClient();

@@ -2,6 +2,8 @@ import { createClient } from "@/lib/supabase/server";
 import { DocumentCard } from "@/components/documents/document-card";
 import type { Document } from "@/lib/types";
 
+export const dynamic = "force-dynamic";
+
 export default async function DocumentsPage() {
   const supabase = await createClient();
   const { data: documents } = await supabase
