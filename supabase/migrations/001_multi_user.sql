@@ -4,6 +4,10 @@
 -- enables RLS, adds hybrid search functions.
 -- ============================================================
 
+-- Ensure pgvector extension is available and vector type is in search path
+CREATE EXTENSION IF NOT EXISTS vector WITH SCHEMA extensions;
+SET search_path TO public, extensions;
+
 -- ----- New tables -----
 
 CREATE TABLE IF NOT EXISTS profiles (
